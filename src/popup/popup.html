@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rocketseat Exporter</title>
+    <link rel="stylesheet" href="../shared/theme.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="../../assets/icons/icon48.png" alt="" width="28" height="28" />
+      <div>
+        <h1 class="header__title">Rocketseat Exporter</h1>
+        <p class="header__subtitle">Captura e exportação Markdown</p>
+      </div>
+    </header>
+
+    <main id="content" class="content">
+      <div class="state">
+        <div class="spinner"></div>
+        <span>Lendo a página…</span>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button id="capture-button" class="btn btn--primary btn--block" type="button" disabled>
+        Capturar aula
+      </button>
+      <div class="footer__secondary">
+        <button id="dashboard-button" class="btn btn--ghost" type="button">
+          Painel de gerenciamento
+        </button>
+        <button id="reload-button" class="btn btn--ghost" type="button" disabled>Ler novamente</button>
+        <button id="diagnostics-button" class="btn btn--ghost" type="button" disabled title="Abrir diagnóstico técnico da leitura">
+          Diagnóstico
+        </button>
+      </div>
+    </footer>
+
+    <script src="../utils/text.js"></script>
+    <script src="../utils/timestamp.js"></script>
+    <script src="../utils/transcript.js"></script>
+    <script src="../utils/slugify.js"></script>
+    <script src="../services/database.js"></script>
+    <script src="../services/storage.js"></script>
+    <script src="../services/markdown.js"></script>
+    <script src="../services/exporter.js"></script>
+    <script src="../shared/messages.js"></script>
+    <script src="../shared/page-reader.js"></script>
+    <script src="../shared/ui.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

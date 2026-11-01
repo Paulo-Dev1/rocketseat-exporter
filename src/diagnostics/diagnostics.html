@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diagnóstico de leitura · Rocketseat Exporter</title>
+    <link rel="icon" href="../../assets/icons/icon32.png" />
+    <link rel="stylesheet" href="../shared/theme.css" />
+    <link rel="stylesheet" href="diagnostics.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__brand">
+        <img src="../../assets/icons/icon48.png" alt="" width="32" height="32" />
+        <div>
+          <h1 class="topbar__title">Diagnóstico de leitura e armazenamento</h1>
+          <p class="topbar__subtitle">Rocketseat Exporter · Etapa 3</p>
+        </div>
+      </div>
+      <div class="topbar__actions">
+        <label class="tab-select">
+          <span>Aba da aula</span>
+          <select id="tab-select"></select>
+        </label>
+        <button id="reload-button" class="btn btn--ghost" type="button">Ler novamente</button>
+        <button id="capture-button" class="btn btn--primary" type="button" disabled>Capturar aula</button>
+        <button id="copy-button" class="btn btn--ghost" type="button" disabled>Copiar transcrição</button>
+        <button id="download-button" class="btn btn--ghost" type="button" disabled>Baixar JSON</button>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="state">
+        <div class="spinner"></div>
+        <span>Carregando…</span>
+      </div>
+    </main>
+
+    <script src="../utils/text.js"></script>
+    <script src="../utils/timestamp.js"></script>
+    <script src="../utils/transcript.js"></script>
+    <script src="../utils/slugify.js"></script>
+    <script src="../services/database.js"></script>
+    <script src="../shared/messages.js"></script>
+    <script src="../shared/page-reader.js"></script>
+    <script src="../shared/ui.js"></script>
+    <script src="diagnostics.js"></script>
+  </body>
+</html>
+

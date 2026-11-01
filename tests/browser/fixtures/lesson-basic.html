@@ -1,0 +1,68 @@
+<!--
+  Fixture de teste (HIPOTÉTICA): estrutura simplificada de uma página de aula.
+  Os únicos elementos confirmados da plataforma são: <h1> com o nome da aula,
+  links /jornada/.../disciplinas e /jornada/.../conteudos no breadcrumb, e os
+  segmentos <div time="" text=""><span/><p/></div>. O restante (classes, nav,
+  aside, svg) existe apenas para simular ruído e testar a robustez do parser.
+-->
+<aside>
+  <a href="/jornada/pos-fullstack-ia/disciplinas">Minha jornada</a>
+  <a href="/jornada/pos-fullstack-ia/fundamentos/conteudos">Conteúdos</a>
+</aside>
+
+<header>
+  <!-- Breadcrumb duplicado para mobile, oculto (deve ser ignorado). -->
+  <div style="display: none">
+    <a href="/jornada/pos-fullstack-ia/disciplinas">Pós (mobile)</a>
+    <a href="/jornada/pos-fullstack-ia/fundamentos/conteudos">Trilha (mobile)</a>
+    <span>Matéria (mobile)</span>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <a class="text-sm" href="/jornada/pos-fullstack-ia/disciplinas">
+      <svg width="12" height="12" aria-hidden="true"><title>ícone</title><path d="M0 0h12v12H0z" /></svg>
+      Pós Graduação Full-Stack com IA
+    </a>
+    <svg width="8" height="8"><path d="M0 0l8 4-8 4z" /></svg>
+    <a class="text-sm" href="/jornada/pos-fullstack-ia/fundamentos/conteudos">Fundamentos Técnicos e Estratégicos</a>
+    <svg width="8" height="8"><path d="M0 0l8 4-8 4z" /></svg>
+    <span class="text-sm">Upload widget Server</span>
+  </div>
+</header>
+
+<main>
+  <h1></h1>
+  <h1>
+    Configurando build
+    da aplicação
+  </h1>
+
+  <div class="tabs">
+    <button>Descrição</button>
+    <button>Transcrição</button>
+  </div>
+
+  <div class="transcript">
+    <div time="0" text=" Última coisa que a gente vai fazer">
+      <span>00:00</span>
+      <p>Última coisa que a gente vai fazer</p>
+    </div>
+    <div time="8" text=" Agora vamos configurar o projeto.  ">
+      <span>00:08</span>
+      <p>Agora vamos configurar o projeto.</p>
+    </div>
+    <div time="65" text="Rodando   `npm run build` — 100% &amp; &quot;ok&quot;?">
+      <span>01:05</span>
+      <p>Rodando `npm run build` — 100% &amp; "ok"?</p>
+    </div>
+    <div time="125.48" text="Segmento com tempo decimal.">
+      <span>02:05</span>
+      <p>Segmento com tempo decimal.</p>
+    </div>
+    <div time="3661" text="Mais de uma hora de aula.">
+      <span>1:01:01</span>
+      <p>Mais de uma hora de aula.</p>
+    </div>
+  </div>
+</main>
+

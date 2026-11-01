@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Painel de Gerenciamento · Rocketseat Exporter</title>
+    <link rel="icon" href="../../assets/icons/icon32.png" />
+    <link rel="stylesheet" href="../shared/theme.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__brand">
+        <img src="../../assets/icons/icon48.png" alt="" width="34" height="34" />
+        <div>
+          <h1 class="topbar__title">Rocketseat Exporter</h1>
+          <p class="topbar__subtitle">Painel de gerenciamento e exportação Markdown</p>
+        </div>
+      </div>
+
+      <div class="topbar__actions">
+        <button id="refresh-button" class="btn btn--ghost" type="button">Atualizar dados</button>
+        <button id="pick-folder-button" class="btn btn--ghost" type="button">Selecionar pasta</button>
+        <button id="grant-permission-button" class="btn btn--ghost hidden" type="button">
+          Conceder permissão
+        </button>
+        <button id="export-all-button" class="btn btn--primary" type="button" disabled>
+          Exportar / Atualizar acervo
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="state">
+        <div class="spinner"></div>
+        <span>Carregando acervo…</span>
+      </div>
+    </main>
+
+    <script src="../utils/text.js"></script>
+    <script src="../utils/timestamp.js"></script>
+    <script src="../utils/transcript.js"></script>
+    <script src="../utils/slugify.js"></script>
+    <script src="../services/database.js"></script>
+    <script src="../services/storage.js"></script>
+    <script src="../services/markdown.js"></script>
+    <script src="../services/exporter.js"></script>
+    <script src="../shared/messages.js"></script>
+    <script src="../shared/ui.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,246 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 24px;
+  background: rgba(18, 18, 20, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar__brand img {
+  border-radius: 8px;
+}
+
+.topbar__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.topbar__subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.topbar__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.tab-select select,
+.filter {
+  min-height: 36px;
+  max-width: 320px;
+  padding: 0 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.main {
+  display: grid;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px 48px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+
+.summary__item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.summary__value {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.summary__label {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 16px;
+}
+
+.kv {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.kv th,
+.kv td {
+  padding: 7px 8px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.kv tr:last-child th,
+.kv tr:last-child td {
+  border-bottom: 0;
+}
+
+.kv th {
+  width: 38%;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.source {
+  display: block;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.crumbs li {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--color-surface-2);
+  font-size: 13px;
+}
+
+.crumbs li + li::before {
+  content: '›';
+  margin-right: 8px;
+  color: var(--color-muted);
+}
+
+.sublist {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.transcript-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.transcript-toolbar .card__title {
+  margin: 0;
+}
+
+.filter {
+  width: 280px;
+}
+
+.table-wrap {
+  max-height: 70vh;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.segments {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.segments th {
+  position: sticky;
+  top: 0;
+  background: var(--color-surface-2);
+  padding: 8px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.segments td {
+  padding: 6px 8px;
+  border-top: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.segments td.num,
+.segments td.time {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.segments td.num {
+  color: var(--color-muted);
+}
+
+.segments tr.is-mismatch td.time--visual {
+  color: var(--color-warning);
+  font-weight: 700;
+}
+
+.segments .alt-text {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-warning);
+}
+
+.count-label {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+

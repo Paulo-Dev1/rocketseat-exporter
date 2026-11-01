@@ -1,0 +1,16 @@
+{
+  "name": "rocketseat-exporter",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Extensão Chrome (Manifest V3) para capturar transcrições das aulas da Rocketseat. Node.js é usado apenas para testes e ferramentas de desenvolvimento.",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:browser",
+    "test:unit": "node --test \"tests/unit/*.test.js\"",
+    "test:browser": "node tests/browser/run-parser-tests.mjs",
+    "check": "node tools/check-syntax.mjs",
+    "icons": "node tools/generate-icons.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

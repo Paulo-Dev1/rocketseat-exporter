@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Rocketseat Exporter",
+  "short_name": "RS Exporter",
+  "version": "1.0.0",
+  "description": "Captura as transcrições das aulas da Rocketseat para um acervo pessoal em Markdown.",
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Rocketseat Exporter",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "options_page": "src/dashboard/dashboard.html",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["https://ftr.rocketseat.com.br/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://ftr.rocketseat.com.br/*"],
+      "js": [
+        "src/utils/text.js",
+        "src/utils/timestamp.js",
+        "src/shared/messages.js",
+        "src/services/course-parser.js",
+        "src/content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

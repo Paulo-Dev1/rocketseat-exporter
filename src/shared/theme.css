@@ -1,0 +1,251 @@
+/* Tema e componentes compartilhados pelas páginas da extensão. */
+
+:root {
+  --color-bg: #121214;
+  --color-surface: #1a1a1e;
+  --color-surface-2: #202024;
+  --color-border: #2e2e35;
+  --color-text: #e1e1e6;
+  --color-muted: #8d8d99;
+  --color-primary: #8257e5;
+  --color-primary-hover: #996dff;
+  --color-success: #04d361;
+  --color-warning: #fba94c;
+  --color-danger: #f75a68;
+  --color-info: #81d8f7;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'DejaVu Sans Mono', Menlo, monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: 14px/1.5 var(--font);
+}
+
+a {
+  color: var(--color-primary-hover);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.card__title {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, opacity 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:not(:disabled):hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--ghost:not(:disabled):hover {
+  border-color: var(--color-primary);
+}
+
+/* Pills de status */
+.pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.pill--ok {
+  background: rgba(4, 211, 97, 0.12);
+  color: var(--color-success);
+}
+
+.pill--warning {
+  background: rgba(251, 169, 76, 0.12);
+  color: var(--color-warning);
+}
+
+.pill--error {
+  background: rgba(247, 90, 104, 0.12);
+  color: var(--color-danger);
+}
+
+.pill--neutral {
+  background: var(--color-surface-2);
+  color: var(--color-muted);
+}
+
+/* Valores de contexto */
+.value {
+  word-break: break-word;
+}
+
+.value--missing {
+  color: var(--color-danger);
+  font-weight: 600;
+}
+
+/* Lista de problemas */
+.issues {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.issue {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: start;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+  border-left: 3px solid var(--color-muted);
+  font-size: 13px;
+}
+
+.issue--error {
+  border-left-color: var(--color-danger);
+}
+
+.issue--warning {
+  border-left-color: var(--color-warning);
+}
+
+.issue--info {
+  border-left-color: var(--color-info);
+}
+
+.issue__level {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  padding-top: 1px;
+}
+
+.issues-empty {
+  margin: 0;
+  color: var(--color-success);
+}
+
+/* Estados de carregamento / mensagem */
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.state--error {
+  color: var(--color-danger);
+}
+
+.spinner {
+  width: 26px;
+  height: 26px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Linhas da transcrição */
+.transcript-lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+}
+
+.transcript-lines li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.transcript-lines li:last-child {
+  border-bottom: 0;
+}
+
+.ts {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-primary-hover);
+  margin-right: 6px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+  border: 2px solid var(--color-bg);
+}
+

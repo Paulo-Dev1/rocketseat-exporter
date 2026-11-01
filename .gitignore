@@ -1,0 +1,34 @@
+# Dependências (caso alguma ferramenta externa seja instalada no futuro)
+node_modules/
+
+# Logs do Node / npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos temporários de sistema operacional e editores
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# Chaves privadas e pacotes gerados pelo Chrome (nunca devem ir para o Git)
+*.pem
+*.crx
+*.zip
+
+# Pastas de acervo ou diagnósticos exportados acidentalmente dentro do projeto
+Rocketseat-Acervo/
+aulas-transcritas/
+rocketseat-diagnostico-*.json
+
+# Variáveis de ambiente locais
+.env
+.env.*
+
