@@ -144,3 +144,12 @@ rocketseat-exporter/
     ├── check-syntax.mjs
     └── generate-icons.mjs
 ```
+
+---
+
+## Aviso Legal e Uso Educacional
+
+- **Projeto independente**: Esta extensão é um projeto de estudo pessoal e independente, sem vínculo oficial, patrocínio ou endosso da Rocketseat.
+- **Respeito à plataforma e à autenticação**: A extensão não realiza requisições a APIs privadas, não faz automação de navegação (*scraping*), não armazena credenciais e não contorna controles de acesso. Ela atua exclusivamente organizando informações já visíveis no DOM para o aluno regularmente autenticado.
+- **Direitos autorais**: Todo o conteúdo das aulas e transcrições pertence à Rocketseat. Os arquivos Markdown (`.md`) gerados localmente destinam-se **exclusivamente ao uso pessoal de estudo e pesquisa individual** do próprio aluno (como consulta em ferramentas de estudo pessoal, a exemplo do NotebookLM), não devendo ser redistribuídos ou publicados em repositórios públicos.
+
